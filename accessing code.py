@@ -4,10 +4,10 @@
 import code as x 
 #importing the main file("code" is the name of the file I have used) as a library 
 
-x.create("sohail",25)
+x.create("sohail",30)
 #to create a key with key_name,value given and with no time-to-live property
 
-x.create("src",70,3600) 
+x.create("src",70,1800) 
 #to create a key with key_name,value given and with time-to-live property value given(number of seconds)
 
 x.read("sohail")
@@ -16,13 +16,13 @@ x.read("sohail")
 x.read("src")
 #it returns the value of the respective key in Jasonobject format if the TIME-TO-LIVE IS NOT EXPIRED else it returns an ERROR
 
-x.create("sohail",50)
+x.create("sohail",40)
 #it returns an ERROR since the key_name already exists in the database
 #To overcome this error 
 #either use modify operation to change the value of a key
 #or use delete operation and recreate it
 
-x.modify("sohail",55)
+x.modify("sohail",45)
 #it replaces the initial value of the respective key with new value 
 
 x.delete("sohail")
